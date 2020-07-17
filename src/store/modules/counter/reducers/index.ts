@@ -7,6 +7,7 @@ type CounterState = {
 export function counterReducer(
   state: CounterState = { count: 0 }, action: CounterActions
 ): CounterState {
+  console.log(action.type);
   switch (action.type) {
     case Actions.INCREMENT:
       return Object.assign({}, state, {
