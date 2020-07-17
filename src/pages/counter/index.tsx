@@ -5,19 +5,19 @@ import { RootState } from "../../store";
 import { Dispatch } from "redux";
 
 const mapStateToProps = (state: RootState) => {
-    return {
-        count: state.counter.count
-    };
+  return {
+    count: state.counter.count
+  };
 };
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
-    return {
-        increment: () => dispatch(increment()),
-        decrement: () => dispatch(decrement())
-    }
+  return {
+    increment: () => dispatch(increment()),
+    decrement: () => dispatch(decrement())
+  }
 }
 
 export const CounterPage = connect(
-    mapStateToProps,
-    mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Counter);
